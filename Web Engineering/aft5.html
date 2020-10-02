@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    button {
+      padding: 5px;
+      text-align: center;
+      font-size: 16px;
+      margin: 2px 2px;
+      border-radius: 25px;
+    }
+  </style>
+  <body>
+    <h2>Array Sort using JavaScript</h2>
+    <p>Click the Button to Sort the Array in Ascending Order</p>
+    <button onclick="myFunction()">SORT</button>
+    <p id="unsrt"></p>
+    <p id="sort"></p>
+    <script>
+      var points = [77, 11, 25, 99, 43, 50, 83];
+      document.getElementById("unsrt").innerHTML =
+        " UnSorted Array : " + points;
+      function myFunction() {
+        points.sort(function (a, b) {
+          return a - b;
+        });
+        document.getElementById("sort").innerHTML = " Sorted Array : " + points;
+      }
+    </script>
+  </body>
+</html>
